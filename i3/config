@@ -200,4 +200,3 @@ client.background            	    $bg
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec_always --no-startup-id compton --config ~/.config/compton.conf 
 exec_always --no-startup-id nm-applet
-exec_always --no-startup-id redshift
