@@ -1,0 +1,64 @@
+!Colors
+
+*background: #2f3243
+*foreground: #bacfdc
+
+*.color0:   #3B4252
+*.color1:   #BF616A
+*.color2:   #A3BE8C
+*.color3:   #EBCB8B
+*.color4:   #81A1C1
+*.color5:   #B48EAD
+*.color6:   #88C0D0
+*.color7:   #E5E9F0
+*.color8:   #4C566A
+*.color9:   #BF616A
+*.color10:  #A3BE8C
+*.color11:  #EBCB8B
+*.color12:  #81A1C1
+*.color13:  #B48EAD
+*.color14:  #8FBCBB
+*.color15:  #ECEFF4 
+
+! Xft settings
+Xft.dpi:                96
+Xft.antialias:          1
+Xft.autohint:           0
+Xft.hinting:            1
+Xft.rgba:               rgb
+
+!==============================================================================
+! rofi
+!------------------------------------------------------------------------------
+
+
+
+! rofi -show run -lines 6 -font "Sans 10"
+! -------------------------------------------------------------------
+! ROFI Config
+! -------------------------------------------------------------------
+    rofi.modi: run
+    rofi.font:  Futura LT 11
+    rofi.width: 50
+    rofi.lines: 6
+    rofi.columns: 1
+    rofi.opacity: 50
+    rofi.location: 0
+    rofi.padding: 50
+    rofi.fuzzy: true
+
+! -------------------------------------------------------------------
+! ROFI Color theme
+! -------------------------------------------------------------------
+rofi.color-enabled: true
+rofi.color-window: #1f2a34, #002b36, #1f2a34
+rofi.color-normal: #1f2a34, #ffffff, #1f2a34, #ffffff, #1f2a34
+rofi.color-active: #1f2a34, #ffffff, #1f2a34, #1f2a34, #ffffff
+rofi.color-urgent: #1f2a34, #ffffff, #1f2a34, #dc322f, #ffffff
+
+
+
+*antialias:  true
+*autohint:   true
+
+
