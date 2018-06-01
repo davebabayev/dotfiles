@@ -2,4 +2,4 @@
 
 An ongoing repository of my Arch Linux configs. 
 
-![i3wm](https://user-images.githubusercontent.com/34580986/40820701-b1b7a1ba-6527-11e8-8b14-7ea21f625e65.png)
+![screenshot from 2018-05-31 23-26-58](https://user-images.githubusercontent.com/34580986/40821085-31b669ee-652a-11e8-86ed-6af45e1b4419.png)
