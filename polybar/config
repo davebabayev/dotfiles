@@ -1,0 +1,163 @@
+;=====================================================
+;
+;   To learn more about how to configure Polybar
+;   go to https://github.com/jaagr/polybar
+;
+;   The README contains alot of information
+;
+;=====================================================
+[colors]
+fg = ${xrdb:color15}
+modfg = ${xrdb:color15}
+bg = #002f3243
+white = #fffdfd
+gray = #585858
+black = #ce1d1d1d
+red = #c795ae
+blue = #95aec7
+yellow = ${xdrb:color3}
+green = #aec795
+
+[global/wm]
+margin-top    = 25
+margin-bottom = 5
+
+[bar/laptop]
+width      = 100%
+height     = 26
+offset-x   = 0%
+offset-y   = 0%
+locale     = en_US.UTF-8
+background = ${colors.bg}
+foreground = ${colors.fg}
+font-0              = "Futura LT:size=10.5;1"
+font-1              = "SFNS:size=10:fontformat=truetype" 
+font-2		    = "FuraMono Nerd Font Mono:pixelsize=22;4"
+label-active-font   = 1
+modules-left        = i3 xwindow
+modules-center      = date
+modules-right       = network mpd backlight volumeintel battery filesystem
+tray-position       = right
+tray-padding        = 4
+tray-transparent    = false
+underline-size      = 0
+spacing             = 2
+padding-left        = 0
+padding-right       = 2
+module-margin-left  = 2
+module-margin-right = 2
+
+[module/xwindow]
+type              = internal/xwindow
+label             = %title:0:30:...%
+[module/i3]
+type                       = internal/i3
+strip-wsnumbers            = true
+ws-icon-0                  = 
+ws-icon-1                  = 2
+ws-icon-2                  = 3
+ws-icon-3                  = 4
+ws-icon-4                  = 5
+format                     = <label-state> <label-mode>
+label-mode-foreground      = ${colors.fg}
+label-mode-background      = ${colors.bg}
+label-mode-padding         = 1
+label-focused-foreground   = #2f3243
+label-focused-background   = ${colors.modfg}
+label-focused-padding      = 2
+;label-unfocused-background = ${colors.fg}
+;label-unfocused-foreground = ${colors.fg}
+label-unfocused-padding    = 1
+label-urgent-foreground    = ${colors.bg}
+label-urgent-background    = ${colors.blue}
+label-urgent-padding       = 1
+label-visible-padding      = 1
+
+[module/backlight]
+type               = internal/backlight
+card               = intel_backlight
+format             =   <label>
+format-padding     = 1
+label              = %percentage%%
+
+[module/network]
+type = internal/network
+interface = wlp2s0
+interval = 1.0
+format-connected    =  <label-connected>
+format-disconnected = <label-disconnected>
+label-connected     =   %essid%
+label-disonnected   = not connected
+fomat-padding       = 3
+
+[module/mpd]
+type                     = internal/mpd
+host                     = 127.0.0.1
+port                     = 6600
+password                 =
+; Seconds to sleep between progressbar/song timer sync
+; Default: 1
+interval                 = 2
+format-online            =  <icon-play>  <label-time>  <label-song>
+format-playing = ${self.format-online}
+format-paused = ${self.format-online}
+format-stopped = ${self.format-online}
+format-online-foreground = ${colors.red}
+label-song-foreground = ${colors.modfg}
+label-time-foreground = ${colors.modfg}
+icon-play                = ⏵
+icon-pause               = ⏸
+icon-stop                = ⏹
+icon-prev                = ⏮
+icon-next                = ⏭
+icon-seekb               = ⏪
+icon-seekf               = ⏩
+icon-random              = 🔀
+icon-repeat              = 🔁
+icon-repeatone           = 🔂
+
+[module/volumeintel]
+type                      = internal/volume
+format-volume             = <ramp-volume> <label-volume>
+master-mixer              = Master
+label-muted               =  muted
+ramp-volume-0             = 
+ramp-volume-1             = 
+ramp-volume-2             = 
+format-volume-padding     = 1
+mapping                   = true
+
+[module/date]
+type              = internal/date
+interval          = 2
+time              = "%H:%M"
+time-alt          = " %A, %d. %B"
+format            = <label>
+format-padding    = 1
+label             = "%time%"
+label-font        = 1
+
+[module/battery]
+type                         = internal/battery
+battery                      = BAT0
+adapter                      = AC
+full-at                      = 99
+
+format-charging              = <animation-charging> <label-charging> 
+format-discharging           = <ramp-capacity> <label-discharging>
+label-discharging            = %percentage%%
+format-full-prefix           = 
+format-padding               = 1
+ramp-capacity-0              =  
+ramp-capacity-1              = 	
+ramp-capacity-2              = 
+ramp-capacity-3              =  
+ramp-capacity-4              = 
+
+animation-charging-0         = 
+animation-charging-1         = 
+animation-charging-2         = 
+animation-charging-3         = 
+animation-charging-4         = 
+animation-charging-framerate = 750
+
